@@ -1,0 +1,14 @@
+C:\Users\karlou\source\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.deps.json
+C:\Users\karlou\source\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.json
+C:\Users\karlou\source\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.runtimeconfig.dev.json
+C:\Users\karlou\source\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\karlou\source\BookShop\BookShop\bin\Debug\netcoreapp2.1\BookShop.pdb
+C:\Users\karlou\source\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csprojAssemblyReference.cache
+C:\Users\karlou\source\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.csproj.CoreCompileInputs.cache
+C:\Users\karlou\source\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cache
+C:\Users\karlou\source\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorAssemblyInfo.cs
+C:\Users\karlou\source\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfoInputs.cache
+C:\Users\karlou\source\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.AssemblyInfo.cs
+C:\Users\karlou\source\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.RazorTargetAssemblyInfo.cache
+C:\Users\karlou\source\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.dll
+C:\Users\karlou\source\BookShop\BookShop\obj\Debug\netcoreapp2.1\BookShop.pdb
