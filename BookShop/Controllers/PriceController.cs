@@ -44,10 +44,17 @@ namespace BookShop.Controllers
         [HttpPost]
         public async Task<ActionResult<Price>> Post(Price item)
         {
-            _context.Prices.Add(item);
-            await _context.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                _context.Prices.Add(item);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(Get), new { id = item.Id }, item);
+                return CreatedAtAction(nameof(Get), new { id = item.Id }, item);
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
         // PUT api/price/id

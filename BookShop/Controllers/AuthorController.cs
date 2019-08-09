@@ -13,26 +13,26 @@ namespace BookShop.Controllers
     [ApiController]
     public class AuthorController : ControllerBase
     {
-        private Db _context;
+        private Db db;
 
         public AuthorController(Db context)
         {
-            _context = context;
+            db = context;
 
         }
-        
+
         // GET api/author
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Author>>> Get()
         {
-            return await _context.Authors.ToListAsync();
+            return await db.Authors.ToListAsync();
         }
 
         // GET api/author/id
         [HttpGet("{id}")]
         public async Task<ActionResult<Author>> Get(int id)
         {
-            var author = await _context.Authors.FindAsync(id);
+            var author = await db.Authors.FindAsync(id);
 
             if (author == null)
             {
@@ -46,10 +46,18 @@ namespace BookShop.Controllers
         [HttpPost]
         public async Task<ActionResult<Author>> Post(Author item)
         {
-            _context.Authors.Add(item);
-            await _context.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                db.Authors.Add(item);
+                await db.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(Get), new { id = item.Id }, item);
+                return CreatedAtAction(nameof(Get), new { id = item.Id }, item);
+
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
         // PUT api/author/id
@@ -61,8 +69,8 @@ namespace BookShop.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(item).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            db.Entry(item).State = EntityState.Modified;
+            await db.SaveChangesAsync();
 
             return NoContent();
         }
@@ -71,15 +79,15 @@ namespace BookShop.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var author = await _context.Authors.FindAsync(id);
+            var author = await db.Authors.FindAsync(id);
 
             if (author == null)
             {
                 return NotFound();
             }
 
-            _context.Authors.Remove(author);
-            await _context.SaveChangesAsync();
+            db.Authors.Remove(author);
+            await db.SaveChangesAsync();
 
             return NoContent();
         }
